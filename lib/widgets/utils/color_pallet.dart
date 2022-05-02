@@ -6,5 +6,6 @@ class ColorPallet {
     'secondary': Color.fromRGBO(40, 44, 90, 1),
     'pink': Color.fromRGBO(196, 85, 244, 1),
     'purple': Color.fromRGBO(94, 85, 214, 1),
+    'white': Colors.white,
   };
 }
