@@ -4,17 +4,9 @@ import '../../dummy_data_staging.dart';
 import '../utils/color_pallet.dart';
 
 class Staging extends StatelessWidget {
-  const Staging({Key? key}) : super(key: key);
+  const Staging({Key? key, required this.getTotalTime}) : super(key: key);
 
-  int getTotalTime() {
-    int totalTime = 0;
-
-    dummyDataExercise.forEach((key, value) {
-      totalTime = totalTime + value;
-    });
-
-    return totalTime;
-  }
+  final int? Function(Map<String, int>) getTotalTime;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +34,7 @@ class Staging extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '${getTotalTime().toString()} MINUTE WORKOUT',
+                '${getTotalTime(dummyDataExercise).toString()} MINUTE WORKOUT',
                 style: Theme.of(context).textTheme.headline3,
               ),
               Text('${dummyDataExercise.length} exercise',
