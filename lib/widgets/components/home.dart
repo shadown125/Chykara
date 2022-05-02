@@ -8,11 +8,15 @@ import '../elements/info_box.dart';
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
-  static int getTotalTime(Map<String, int> list) {
+  static int getTotalTime(Map<String, Map<String, int>> list) {
     int totalTime = 0;
 
-    list.forEach((String key, int value) {
-      totalTime = totalTime + value;
+    list.forEach((key, data) {
+      data.forEach((key, value) {
+        if (key == 'time') {
+          totalTime = totalTime + value;
+        }
+      });
     });
 
     return totalTime;

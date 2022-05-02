@@ -6,7 +6,7 @@ import '../utils/color_pallet.dart';
 class Staging extends StatelessWidget {
   const Staging({Key? key, required this.getTotalTime}) : super(key: key);
 
-  final int? Function(Map<String, int>) getTotalTime;
+  final int? Function(Map<String, Map<String, int>>) getTotalTime;
 
   @override
   Widget build(BuildContext context) {
