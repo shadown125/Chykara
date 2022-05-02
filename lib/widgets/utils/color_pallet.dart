@@ -7,5 +7,6 @@ class ColorPallet {
     'pink': Color.fromRGBO(196, 85, 244, 1),
     'purple': Color.fromRGBO(94, 85, 214, 1),
     'white': Colors.white,
+    'lightBlue': Color.fromRGBO(77, 210, 255, 1),
   };
 }
