@@ -31,6 +31,11 @@ class App extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
+          headline4: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
         ),
       ),
       debugShowCheckedModeBanner: false,
