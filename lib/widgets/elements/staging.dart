@@ -22,8 +22,8 @@ class Staging extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
-                spreadRadius: 4,
+                color: Colors.black.withOpacity(0.2),
+                spreadRadius: 2,
                 blurRadius: 3,
               )
             ]),
