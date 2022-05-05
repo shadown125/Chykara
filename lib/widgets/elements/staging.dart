@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../dummy_data_staging.dart';
 import '../utils/color_pallet.dart';
+import '../models/exercises.dart';
 
 class Staging extends StatelessWidget {
   const Staging({Key? key, required this.getTotalTime}) : super(key: key);
 
-  final int? Function(Map<String, Map<String, int>>) getTotalTime;
+  final int? Function(List<Exercises>) getTotalTime;
 
   @override
   Widget build(BuildContext context) {

@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../utils/color_pallet.dart';
 import '../../dummy_data_staging.dart';
+import '../models/exercises.dart';
 
 class InfoBox extends StatelessWidget {
   const InfoBox({Key? key, required this.getTotalTime}) : super(key: key);
 
-  final int Function(Map<String, Map<String, int>>) getTotalTime;
+  final int Function(List<Exercises>) getTotalTime;
 
   @override
   Widget build(BuildContext context) {

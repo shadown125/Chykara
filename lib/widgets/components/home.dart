@@ -1,23 +1,20 @@
-import 'package:chykara/dummy_data_staging.dart';
+import 'package:chykara/widgets/models/exercises.dart';
 import 'package:flutter/material.dart';
 
 import 'header.dart';
 import '../elements/staging.dart';
 import '../elements/info_box.dart';
+import '../elements/exercise.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
-  static int getTotalTime(Map<String, Map<String, int>> list) {
+  static int getTotalTime(List<Exercises> list) {
     int totalTime = 0;
 
-    list.forEach((key, data) {
-      data.forEach((key, value) {
-        if (key == 'time') {
-          totalTime = totalTime + value;
-        }
-      });
-    });
+    for (var key in list) {
+      totalTime = totalTime + key.time;
+    }
 
     return totalTime;
   }
@@ -26,18 +23,25 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const Header(),
-      body: Container(
-        margin: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-        child: Column(
-          children: const [
-            Staging(
-              getTotalTime: getTotalTime,
+      body: SafeArea(
+        child: Container(
+          margin:
+              const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                Staging(
+                  getTotalTime: getTotalTime,
+                ),
+                SizedBox(height: 25),
+                InfoBox(
+                  getTotalTime: getTotalTime,
+                ),
+                SizedBox(height: 25),
+                Exercise(),
+              ],
             ),
-            SizedBox(height: 25),
-            InfoBox(
-              getTotalTime: getTotalTime,
-            ),
-          ],
+          ),
         ),
       ),
     );
