@@ -1,16 +1,9 @@
-# chykara
+# Chykara
 
-A new Flutter project.
+Is a Flutter based Project for helping you to save progress data for Gym Exercise
+
+<b>Please note!! The project is in PROTOTYPE state and the final state might look completely different as current state.</b>
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Will coming soon...
