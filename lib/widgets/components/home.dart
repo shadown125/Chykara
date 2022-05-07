@@ -2,9 +2,9 @@ import 'package:chykara/widgets/models/exercises.dart';
 import 'package:flutter/material.dart';
 
 import 'header.dart';
+import 'exercise.dart';
 import '../elements/staging.dart';
 import '../elements/info_box.dart';
-import '../elements/exercise.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
