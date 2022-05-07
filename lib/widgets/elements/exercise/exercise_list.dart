@@ -12,9 +12,7 @@ class ExerciseList extends StatefulWidget {
 }
 
 class _ExerciseList extends State<ExerciseList> {
-  final double cardWidth = 60;
   final double circleRadius = 70;
-  Color iconColor = Colors.green;
 
   void markExercise(int index) {
     var item = dummyDataExercise[index];
