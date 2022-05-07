@@ -1,17 +1,21 @@
 class Exercises {
   final String id;
   final String title;
+  int series;
+  int reps;
+  double weight;
   final int seriesDuration;
-  final int series;
-  final int kalories;
   final int time;
+  bool complete;
 
   Exercises({
     required this.id,
     required this.title,
     required this.series,
-    this.kalories = 80,
+    required this.reps,
+    this.weight = 0,
     this.seriesDuration = 3,
     this.time = 9,
+    this.complete = false,
   });
 }
