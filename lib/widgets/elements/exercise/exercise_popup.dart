@@ -1,7 +1,7 @@
-import 'package:chykara/widgets/elements/buttons/button_primary.dart';
 import 'package:flutter/material.dart';
 
 import '../../../dummy_data_staging.dart';
+import '../buttons/button_primary.dart';
 import 'exercise_avatar.dart';
 import 'exercise_popup_option.dart';
 
