@@ -1,14 +1,14 @@
-import 'package:chykara/widgets/models/exercises.dart';
 import 'package:flutter/material.dart';
 
-import 'header.dart';
-import 'exercise.dart';
+import '../models/exercises.dart';
+import '../components/exercise_list.dart';
 import '../elements/wrapper.dart';
-import '../elements/staging.dart';
-import '../elements/info_box.dart';
+import '../components/info_box.dart';
+import '../components/staging.dart';
+import '../components/header.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class Exercise extends StatelessWidget {
+  const Exercise({Key? key}) : super(key: key);
 
   static int getTotalTime(List<Exercises> list) {
     int totalTime = 0;
@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
               getTotalTime: getTotalTime,
             ),
             SizedBox(height: 25),
-            Exercise(),
+            ExerciseList(),
           ],
         ),
       ),

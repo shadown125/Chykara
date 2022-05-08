@@ -1,8 +1,8 @@
 import 'package:chykara/widgets/elements/exercise/exercise_item.dart';
 import 'package:flutter/material.dart';
 
-import '../../../dummy_data_staging.dart';
-import 'exercise_popup.dart';
+import '../../dummy_data_staging.dart';
+import '../elements/exercise/exercise_popup.dart';
 
 class ExerciseList extends StatefulWidget {
   const ExerciseList({Key? key}) : super(key: key);

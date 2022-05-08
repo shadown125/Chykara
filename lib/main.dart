@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/components/home.dart';
+import 'widgets/pages/home.dart';
 import 'widgets/utils/color_pallet.dart';
 
 void main() {

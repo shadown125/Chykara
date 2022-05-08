@@ -75,7 +75,7 @@ class InfoBox extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),
