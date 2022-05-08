@@ -20,44 +20,44 @@ class ExercisePopup extends StatefulWidget {
 }
 
 class _ExercisePopupState extends State<ExercisePopup> {
-  @override
-  Widget build(BuildContext context) {
-    void add(id) {
-      setState(() {
+  void add(id) {
+    setState(() {
+      if (id == 'series') {
+        dummyDataExercise[widget.index].series++;
+        return;
+      }
+      if (id == 'reps') {
+        dummyDataExercise[widget.index].reps++;
+        return;
+      }
+      if (id == 'weight') {
+        dummyDataExercise[widget.index].weight += 0.5;
+        return;
+      }
+    });
+  }
+
+  void remove(id) {
+    setState(
+      () {
         if (id == 'series') {
-          dummyDataExercise[widget.index].series++;
+          dummyDataExercise[widget.index].series--;
           return;
         }
         if (id == 'reps') {
-          dummyDataExercise[widget.index].reps++;
+          dummyDataExercise[widget.index].reps--;
           return;
         }
         if (id == 'weight') {
-          dummyDataExercise[widget.index].weight += 0.5;
+          dummyDataExercise[widget.index].weight -= 0.5;
           return;
         }
-      });
-    }
+      },
+    );
+  }
 
-    void remove(id) {
-      setState(
-        () {
-          if (id == 'series') {
-            dummyDataExercise[widget.index].series--;
-            return;
-          }
-          if (id == 'reps') {
-            dummyDataExercise[widget.index].reps--;
-            return;
-          }
-          if (id == 'weight') {
-            dummyDataExercise[widget.index].weight -= 0.5;
-            return;
-          }
-        },
-      );
-    }
-
+  @override
+  Widget build(BuildContext context) {
     return Dialog(
       backgroundColor: Colors.white,
       shape: RoundedRectangleBorder(
