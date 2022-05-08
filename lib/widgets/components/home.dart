@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'header.dart';
 import 'exercise.dart';
+import '../elements/wrapper.dart';
 import '../elements/staging.dart';
 import '../elements/info_box.dart';
 
@@ -23,25 +24,19 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const Header(),
-      body: SafeArea(
-        child: Container(
-          margin:
-              const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
-          child: SingleChildScrollView(
-            child: Column(
-              children: const [
-                Staging(
-                  getTotalTime: getTotalTime,
-                ),
-                SizedBox(height: 25),
-                InfoBox(
-                  getTotalTime: getTotalTime,
-                ),
-                SizedBox(height: 25),
-                Exercise(),
-              ],
+      body: Wrapper(
+        child: Column(
+          children: const [
+            Staging(
+              getTotalTime: getTotalTime,
             ),
-          ),
+            SizedBox(height: 25),
+            InfoBox(
+              getTotalTime: getTotalTime,
+            ),
+            SizedBox(height: 25),
+            Exercise(),
+          ],
         ),
       ),
     );
