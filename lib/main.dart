@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/components/bottom_navigation.dart';
+import 'widgets/components/header.dart';
 import 'widgets/pages/home.dart';
+import 'widgets/pages/exercise.dart';
 import 'widgets/utils/color_pallet.dart';
 
 void main() {
   runApp(const App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  int currentPageIndex = 0;
+
+  final pages = const [
+    Home(),
+    Exercise(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +55,15 @@ class App extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home: Scaffold(
+        appBar: const Header(),
+        body: pages[currentPageIndex],
+        bottomNavigationBar: BottomNavigation(
+          getCurrentIndex: (index) => setState(() {
+            currentPageIndex = index;
+          }),
+        ),
+      ),
     );
   }
 }
