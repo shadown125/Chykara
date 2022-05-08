@@ -5,7 +5,6 @@ import '../components/exercise_list.dart';
 import '../elements/wrapper.dart';
 import '../components/info_box.dart';
 import '../components/staging.dart';
-import '../components/header.dart';
 
 class Exercise extends StatelessWidget {
   const Exercise({Key? key}) : super(key: key);
@@ -22,22 +21,19 @@ class Exercise extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const Header(),
-      body: Wrapper(
-        child: Column(
-          children: const [
-            Staging(
-              getTotalTime: getTotalTime,
-            ),
-            SizedBox(height: 25),
-            InfoBox(
-              getTotalTime: getTotalTime,
-            ),
-            SizedBox(height: 25),
-            ExerciseList(),
-          ],
-        ),
+    return Wrapper(
+      child: Column(
+        children: const [
+          Staging(
+            getTotalTime: getTotalTime,
+          ),
+          SizedBox(height: 25),
+          InfoBox(
+            getTotalTime: getTotalTime,
+          ),
+          SizedBox(height: 25),
+          ExerciseList(),
+        ],
       ),
     );
   }

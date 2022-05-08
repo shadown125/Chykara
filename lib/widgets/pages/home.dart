@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../components/header.dart';
 import '../elements/wrapper.dart';
 
 class Home extends StatelessWidget {
@@ -8,12 +7,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const Header(),
-      body: Wrapper(
-        child: Column(
-          children: const [],
-        ),
+    return Wrapper(
+      child: Column(
+        children: const [],
       ),
     );
   }
